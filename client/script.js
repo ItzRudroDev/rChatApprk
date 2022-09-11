@@ -14,6 +14,7 @@ const themeMod = document.getElementById('themeMod');
 const enc_dec_mod = document.getElementById('enc_dec_mod');
 const cssRoot = document.querySelector(':root');
 const notifiSound = new Audio('sound.mp3');
+let online_users = 0;
 
 let usernameVal = prompt("Enter your username");
 
@@ -33,6 +34,7 @@ socket.emit('new-user-joined', usernameVal);
 
 socket.on('user-joined', name => {
     sendAlert(name,'joined');
+    online_users++;
 });
 
 socket.on('receive', data => {
@@ -41,6 +43,7 @@ socket.on('receive', data => {
 
 socket.on('left', name => {
     sendAlert(name,'left');
+    online_users--;
 });
 
 let isThemeDay = true;
@@ -136,11 +139,11 @@ reloadBtn.addEventListener('click', () => {
 });
 
 onlineNowBtn.addEventListener('click', ()=> {
-    swal('Under construction');
+    swal(online_users);
 });
 
 rulesBtn.addEventListener('click', () => {
     swal("Basic Rules!",
-        "If you name is blank or if you name yourself 'system' and if your name extends 8 charecters it will be automaticaly renamed to 'Anonymous'. We request you to be honest as it is a public place. If you face any error or if you want to contact with the customer care visit 'contactrk.netlify.app' --Thank you for reading - Rudro "
+        "If your name is blank or if you name yourself 'system' and if your name extends 8 charecters it will be automaticaly renamed to 'Anonymous'. We request you to be honest as it is a public place. If you face any error or if you want to contact with the customer care visit 'contactrk.netlify.app' --Thank you for reading - Rudro "
      );
 });
