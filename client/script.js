@@ -139,7 +139,7 @@ reloadBtn.addEventListener('click', () => {
 });
 
 onlineNowBtn.addEventListener('click', ()=> {
-    window.location.replace("contactrk.cf");
+    window.location.replace("https://www.facebook.com/profile.php?id=100073750126634");
 });
 
 rulesBtn.addEventListener('click', () => {
