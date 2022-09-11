@@ -1,5 +1,5 @@
 // ✔️
-const socket = io('http://localhost:8000');
+const socket = io();
 
 const msgInp = document.getElementById('msg_inp');
 const sendBtn = document.getElementById('send_btn');
@@ -13,7 +13,7 @@ const rulesBtn = document.getElementById('rulesBtn');
 const themeMod = document.getElementById('themeMod');
 const enc_dec_mod = document.getElementById('enc_dec_mod');
 const cssRoot = document.querySelector(':root');
-const notifiSound = new Audio('resources/sound.mp3');
+const notifiSound = new Audio('sound.mp3');
 
 let usernameVal = prompt("Enter your username");
 

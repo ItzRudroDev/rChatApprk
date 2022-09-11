@@ -1,8 +1,22 @@
-const io = require("socket.io")(8000, {
+const express = require("express");
+const app = express();
+const http = require('http').createServer(app);
+const port = process.env.PORT || 3000;
+const io = require("socket.io")(http, {
   cors: {
     origin: "*",
     methods: ["GET", "POST"]
   }
+});
+
+http.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+app.use(express.static(__dirname + '/client'))
+
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
 const users = {};
