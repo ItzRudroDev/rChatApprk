@@ -139,7 +139,7 @@ reloadBtn.addEventListener('click', () => {
 });
 
 onlineNowBtn.addEventListener('click', ()=> {
-    swal('Currently online ' + online_users + 'users');
+    window.location.replace("contactrk.cf");
 });
 
 rulesBtn.addEventListener('click', () => {
