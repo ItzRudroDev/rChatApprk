@@ -139,7 +139,7 @@ reloadBtn.addEventListener('click', () => {
 });
 
 onlineNowBtn.addEventListener('click', ()=> {
-    swal(online_users);
+    swal('Currently online ' + online_users + 'users');
 });
 
 rulesBtn.addEventListener('click', () => {
