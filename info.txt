@@ -1,0 +1,6 @@
+     ------------------------------------------------------------
+
+This is a web-based chat application that I've made using socket.io nodejs framework. Users apart from anywhere of the world can join the chat globaly.
+I just made this app for educational purpose so I am not going to upload it for production. But I will deploy it on netlify for my portfolio.
+
+    --- Inbox me to give it a try (Only for newbie developers.) ---

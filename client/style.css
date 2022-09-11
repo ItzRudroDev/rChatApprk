@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --dark : #000;
+    --white : #fff;
+    --chatCol : rgb(230, 229, 229);
+    --bgCol :  rgb(17, 115, 243);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bgCol);
+}
+
+.wrapper {
+    height: 35rem;
+    width: 25rem;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+.nav {
+    height: 10%;
+    width: 100%;
+    margin-top: 0.5rem;
+    user-select: none;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    /* background-color: rgb(204, 201, 201); */
+}
+
+.branding {
+    height: 100%;
+    width: 50%;
+    /* margin-top: 0.5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_btns {
+    height: 100%;
+    width: 50%;
+    /* margin-top: 0.5rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: rgb(136, 134, 134); */
+}
+
+.nav_btns i {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.nav_btns i:hover {
+    opacity: 1;
+    color: var(--dark);
+}
+
+.branding img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.branding p {
+    font-size: 1.5rem;
+    /* margin-right: 2rem; */
+    letter-spacing: 0.2rem;
+    color: var(--dark);
+}
+
+.underlineFnav{
+    width: 100%;
+    height: 0.01rem;
+    margin-top: 0.1rem;
+    background-color: var(--dark);
+}
+
+.chat_area {
+    height: 74%;
+    width: 100%;
+    margin-top: 0.5rem;
+    overflow-y: scroll;
+    /* background-color: rgb(145, 143, 143); */
+}
+
+.chat_area::-webkit-scrollbar {
+    width: 0;
+}
+
+.underlineFchat {
+    width: 100%;
+    height: 0.01rem;
+    margin-top: 0.5rem;
+    background-color: var(--dark);
+}
+
+.messageCont {
+    width: 100%;
+    padding: 1rem;
+    /* background-color: rgb(206, 205, 205); */
+    display: flex;
+    flex-direction: column;
+}
+
+.username_incoming {
+    font-size: 0.8rem;
+    margin-left: 2px;
+    color: var(--dark);
+}
+
+.username_outgoing {
+    font-size: 0.8rem;
+    align-self: flex-end;
+    margin-right: 2px;
+    color: var(--dark);
+}
+
+.msg_incoming {
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 0.8rem;
+    background-color: var(--chatCol);
+    color: var(--dark);
+    word-wrap: break-word;
+    margin-top: 0.5rem;
+}
+
+.msg_outgoing {
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 8.8rem;
+    font-size: 0.8rem;
+    background-color: var(--chatCol);
+    color: var(--dark);
+    word-wrap: break-word;
+    margin-top: 0.5rem;
+    align-self: flex-end;
+}
+
+.input_area {
+    height: 10%;
+    width: 100%;
+    margin-top: 0.3rem;
+    user-select: none;
+    /* background-color: rgb(204, 201, 201); */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.msg_inp {
+    width: 75%;
+    height: 60%;
+    outline: none;
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--dark);
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.send_btn {
+    width: 15%;
+    height: 60%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--dark);
+    background-color: var(--white);
+    color: var(--dark);
+    transition: background 0.3s ease;
+}
+
+.send_btn:hover {
+    border: 1px solid var(--dark);
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.joinleaveAlert {
+    padding: 0.2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    font-size: 10px;
+    background-color: var(--chatCol);
+    opacity: 0.8;
+    color: var(--dark);
+    justify-self: center;
+    margin: auto;
+    margin-top: 0.5rem;
+    box-shadow: 0.5px 0.5px 1px #000;
+}

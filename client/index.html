@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Rchat | Connect the world now</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Nav stats -->
+        <div class="nav">
+            <div class="branding">
+                <img src="resources/logo.png">
+                <p>R-Chat | </p>
+            </div>
+            <!-- branding end -->
+            <div class="nav_btns">
+                <span id="themeBtn">
+                    <i class="fa-solid fa-sun" id="themeMod" title="Day mode"></i>
+                </span>
+                <span id="enc_dec_togBtn">
+                    <i class="fa-solid fa-eye" id="enc_dec_mod" title="Decryoted"></i>
+                </span>
+                <span id="reloadBtn">
+                    <i class="fa-solid fa-rotate-right" title="Reload page"></i>
+                </span>
+                <span id="onlineNowBtn">
+                    <i class="fa-solid fa-user" title="Online now"></i>
+                </span>
+                <span id="rulesBtn">
+                    <i class="fa-solid fa-book" title="Rules"></i>
+                </span>
+            </div>
+        </div>
+        <div class="underlineFnav"></div>
+        <!-- Nav ends -->
+        <div class="chat_area" id="chat_area">
+            <!-- msg coming from js here -->
+        </div>
+        <div class="underlineFchat"></div>
+        <!-- chat_area ends -->
+        <div class="input_area">
+            <input type="text" class="msg_inp" id="msg_inp" placeholder="What's on your mind?">
+            <button class="send_btn" id="send_btn">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
